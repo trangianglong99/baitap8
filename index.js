@@ -145,19 +145,19 @@ function mang() {
 
 //bài 10:So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn.
 function soSanh() {
-  soDem = 0;
   demDuong = 0;
   demAm = 0;
   for (var i = 0; i < mang1.length; i++) {
-    if (demDuong > 0) {
-      soDem++;
-    } else if (demAm < 0) {
-      soDem--;
+    if (mang1[i] > 0) {
+      demDuong++;
+    } else if (mang1[i] < 0) {
+      demAm++;
     }
   }
   if (demDuong < demAm) {
-    console.log("so duong nhieu hon" + soDem);
+    document.getElementById("txtNum10").innerHTML = "so am nhieu hon " + demAm;
   } else {
-    console.log("so am nhieu hon" + soDem);
+    document.getElementById("txtNum10").innerHTML =
+      "so duong nhieu hon " + demDuong;
   }
 }
